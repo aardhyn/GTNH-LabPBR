@@ -1,0 +1,6 @@
+water
+lava
+fire
+portal
+glass
+ice
