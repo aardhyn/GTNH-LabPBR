@@ -2,13 +2,13 @@
 
 Python script to generate a LabPBR pack compatible with **Complementary 4.x** and **Angelica** for use in **GregTech: New Horizons**.
 
-Based on the work by Rodney and Sampsa.
+Based on the work by [Rodney](https://github.com/RodneyGo) and [Sampsa](https://github.com/S4mpsa).
 
 ## Installation
 
 ### Quick
 
-Install the appropriate resource pack from [Releases](https://github.com/aardhyn/GTNH_LabPBR/releases) and place it in the `resourcepacks` directory of your GTNH instance installation.
+Install the appropriate resource pack from [Releases](https://github.com/aardhyn/GTNH-LabPBR/releases) and place it in the `resourcepacks` directory of your GTNH instance installation.
 
 Boot the pack, enable the Resource Pack, then switch from **Integrated PBR** to **LabPBR** in your shader configuration within Angelica.
 
@@ -34,12 +34,15 @@ python main.py -s /path/to/Prism/instance/.minecraft
 
 | Flag                      | Description                                                                             | Default Behavior                                                                     |
 | ------------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| `-s / --source <file>     | Path to your GTNH installation                                                          | Required                                                                             |
+| `-s / --source <file>`    | Path to your GTNH installation                                                          | Required                                                                             |
 | `-b / --blacklist <file>` | Path to a blacklist text file listing textures to exclude from specular map generation. | All textures are processed if not provided.                                          |
-| `-o / --output <path>`    | Custom output folder for the resource pack.                                             | `<source>/resourcepacks/GTNH_LabPBR`, deduplicated automatically (`_1`, `_2`, etc.). |
+| `-o / --output <path>`    | Custom output folder for the resource pack.                                             | `<source>/resourcepacks/GTNH_LabPBR`                                                 |
 
 For example
 
 ```bash
-python main.py -s "/path/to/Prism/instance/.minecraft" -b blacklist.txt -o "/path/to/custom/output"
+python main.py \
+  -s "/path/to/Prism/instance/.minecraft" \
+  -b blacklist.txt \
+  -o "/path/to/custom/output"
 ```
